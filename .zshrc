@@ -26,8 +26,13 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# setup code::stats
+export CODESTATS_API_KEY="SFMyNTY.YzJGdFlYSjBhRFU1T1RrPSMjTWpjek9ERT0.gtl41np9f0zispG0UgQl76xlr_RjMPVSRHISUZxkLdM"
+export CODESTATS_LOG_FILE="$HOME/codestats.log"
 
 # Add in zsh plugins
+zinit ice from"gitlab"
+zinit light code-stats/code-stats-zsh
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -82,4 +87,4 @@ alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd zsh)" 
